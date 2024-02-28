@@ -25,8 +25,7 @@
       "priority": 0,
       "recipientKeys": ["did:web:jonmattgray.github.io:dids:1#owner"],
       "routingKeys": [],
-
-      "serviceEndpoint": "localhost:3010"
+      "serviceEndpoint": "http://nice-agent-alice-portal:3000"
     }
   ]
 }
