@@ -1,0 +1,32 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:jonmattgray.github.io:dids:test:bob",
+  "verificationMethod": [
+    {
+      "id": "did:web:jonmattgray.github.io:dids:test:bob#owner",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:jonmattgray.github.io:dids:test:bob",
+      "publicKeyJwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "bt2EgfokD-kQD1u8uUVIL5SGyqVkEPUZyXxei82LGJ4"
+      }
+    }
+  ],
+  "authentication": ["did:web:jonmattgray.github.io:dids:test:bob#owner"],
+  "assertionMethod": ["did:web:jonmattgray.github.io:dids:test:bob#owner"],
+  "service": [
+    {
+      "id": "did:web:jonmattgray.github.io:dids:test:bob#did-communication",
+      "type": "did-communication",
+      "priority": 0,
+      "recipientKeys": ["did:web:jonmattgray.github.io:dids:test:bob#owner"],
+      "routingKeys": [],
+      "accept": ["didcomm/aip1"],
+      "serviceEndpoint": "http://nice-agent-bob-veritable:5002"
+    }
+  ]
+}

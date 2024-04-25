@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:jonmattgray.github.io:dids:test:charlie",
+  "verificationMethod": [
+    {
+      "id": "did:web:jonmattgray.github.io:dids:test:charlie#owner",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:jonmattgray.github.io:dids:test:charlie",
+      "publicKeyJwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "sHMxdQPRsauhfJKFfiv2dLQcCktMZbWK7aC0csfiT7o"
+      }
+    }
+  ],
+  "authentication": ["did:web:jonmattgray.github.io:dids:test:charlie#owner"],
+  "assertionMethod": ["did:web:jonmattgray.github.io:dids:test:charlie#owner"],
+  "service": [
+    {
+      "id": "did:web:jonmattgray.github.io:dids:test:charlie#did-communication",
+      "type": "did-communication",
+      "priority": 0,
+      "recipientKeys": [
+        "did:web:jonmattgray.github.io:dids:test:charlie#owner"
+      ],
+      "routingKeys": [],
+      "accept": ["didcomm/aip1"],
+      "serviceEndpoint": "http://nice-agent-issuer-veritable:5002"
+    }
+  ]
+}
